@@ -1,0 +1,58 @@
+
+
+1. Run ls -al *. Describe the output. What do you  conclude about what * matches by default?
+
+ The output is made of all the files in our current directory. For each file, there are permissions, number of hard links, the user who owns the file, the group that owns the file, the file size, the last time the file was modified and the filename.  * matches 0 or more characters in a file or directory name
+
+
+2. Run ls -al .*. What does it output, and why ?
+
+It outputs all the files including hidden files. Because .* matches all those those files. It takes in consideration even the files that start with .
+
+
+3. Why should you never run rm -rf .*? or rm -rf /
+
+Because it will forcibly remove all the files, including hidden files (like those starting with .) , and for -rf/, all the files under root, including hidden files 
+
+
+4. Consult the man page for ls. How would you sort a listing by file modification time?
+
+ls -t
+
+
+5. How would you tell cat to show lines numbers when outputting a file?
+
+cat -n filename
+
+
+6. What is the whatis command?
+
+It is a command that helps get a one-line manual page descriptions
+
+
+7. Run echo “apple” > file.txt. What does file.txt contain?
+
+It contains : 
+apple
+
+
+8. Run echo “banana” > file.txt. What does file.txt contain now? What do you conclude about > ?
+
+It contains:
+banana
+> inserts the argument in the file.
+
+
+9. Run echo “carrot” >> file.txt. What does file.txt contain? What does >> do ? Be sure to note how is that different from >
+
+It contains:
+banana
+carrot
+>> inserts the argument inside the file without deleting the existing content of the file, whereas > deletes the existing content.
+
+
+10. Run echo “a c b e d g f” | wc. What is the output? In your own words, what does | do ? (Hint: Use man to figure out what wc does)
+
+The output is: 1 7 14. 1 is the number of newline, 7 is the number of words and 14 is the number of characters.
+| pipes the output of echo into input for wc
+
